@@ -18,7 +18,7 @@ namespace testAPI
 
     public class Child : Person
     {
-        public string Years { get; set; }
+        public int Years { get; set; }
         public string Name { get; set; }
     }
 }

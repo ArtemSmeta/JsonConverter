@@ -11,12 +11,14 @@ namespace testAPI
         protected override Person Create(Type objectType, JObject jsonObject)
         {
 
+            //if (jsonObject["Cases"] == null)
             if (jsonObject["Department"] != null)
             {
                 return new Employee();
             }
 
-            if (jsonObject["Name"] != null)
+            //if (jsonObject["NewCases"] == null)
+            if (jsonObject["Years"] != null)
             {
                 return new Child();
             }
