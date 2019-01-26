@@ -1,4 +1,4 @@
-﻿namespace TestDTO
+﻿namespace RabbitExample.DTO
 {
     public class Child : PersonBase
     {

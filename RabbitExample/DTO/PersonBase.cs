@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestDTO
+﻿namespace RabbitExample.DTO
 {
     public class PersonBase
     {
