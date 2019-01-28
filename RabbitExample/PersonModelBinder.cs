@@ -24,15 +24,8 @@ namespace RabbitExample
             }
 
             // Создаем главный класс Company
-            Company company = JsonConvert.DeserializeObject<Company>(bodyStr);
-
-            // вытащили строку с нашим массивом
-            var typeTask = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(bodyStr)["Persons"].ToString();
-
-            // конвертировали ее при помощи JsonPersonBaseConverter
-            var persons = JsonConvert.DeserializeObject<IEnumerable<PersonBase>>(typeTask, new JsonPersonBaseConverter());
-
-            company.Persons = persons;            
+            Company company = JsonConvert.DeserializeObject<Company>(bodyStr, new JsonPersonBaseConverter());
+            
             bindingContext.Result = ModelBindingResult.Success(company);
 
             return Task.CompletedTask;
