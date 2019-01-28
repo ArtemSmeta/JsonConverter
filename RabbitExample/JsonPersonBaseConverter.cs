@@ -1,6 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
-using RabbitExample.DTO;
+using TestDTO;
 
 namespace RabbitExample
 {
