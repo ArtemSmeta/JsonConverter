@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Newtonsoft.Json;
-using TestDTO;
+using RabbitExample.DTO;
 
 namespace RabbitExample
 {

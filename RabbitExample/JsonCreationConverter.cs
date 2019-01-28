@@ -15,7 +15,7 @@ namespace RabbitExample
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var jsonObject = JObject.Load(reader);
+            var jsonObject = JObject.Load(reader); // тут вылетает. в reader уже как-то до массива дошло...
             var target = Create(objectType, jsonObject);
             serializer.Populate(jsonObject.CreateReader(), target);
             return target;
